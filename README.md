@@ -11,16 +11,16 @@ Un script para FiveM que permite gestionar un menú interactivo dentro del juego
 - **Compatibilidad**: Funciona en servidores FiveM utilizando QBCore.
 
 ## 🎥 Video
-![Gif Low Quality](https://github.com/Dacuy/FiveM-Dac-Menu-de-pausa/blob/main/nui/ui/assets/DAC%20PAUSEMENU.gif)
+![Gif Low Quality](https://github.com/Dacuy/QB-Core-Dac-Pause-Menu/blob/main/nui/ui/assets/dacpausemenu2.0.gif)
 
 
-Mira cómo funciona el script con mejor calidad en este [video de demostración]([https://streamable.com/1i8imz](https://www.veed.io/view/41079bc4-52fd-4ee0-bb92-82bd2acd21bd?panel=share)).
+Mira cómo funciona el script con mejor calidad en este [video de demostración](https://www.veed.io/view/41079bc4-52fd-4ee0-bb92-82bd2acd21bd?panel=share).
 
 ## 📸 Capturas de Pantalla
 
 Aquí tienes algunas capturas de pantalla del script en acción:
 
-![Captura de Pantalla 1](https://github.com/Dacuy/FiveM-Dac-Menu-de-pausa/blob/main/nui/ui/assets/FiveM_b2944_GTAProcess%202024-08-11%2015-44-06.png)
+![Captura de Pantalla 1](https://github.com/Dacuy/QB-Core-Dac-Pause-Menu/blob/main/nui/ui/assets/screenShot.png)
 
 
 ## 📦 Instalación
