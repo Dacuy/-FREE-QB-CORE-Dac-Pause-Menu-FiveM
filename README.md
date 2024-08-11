@@ -14,7 +14,7 @@ Un script para FiveM que permite gestionar un menú interactivo dentro del juego
 ![Gif Low Quality](https://github.com/Dacuy/FiveM-Dac-Menu-de-pausa/blob/main/nui/ui/assets/DAC%20PAUSEMENU.gif)
 
 
-Mira cómo funciona el script con mejor calidad en este [video de demostración](https://streamable.com/1i8imz).
+Mira cómo funciona el script con mejor calidad en este [video de demostración]([https://streamable.com/1i8imz](https://www.veed.io/view/41079bc4-52fd-4ee0-bb92-82bd2acd21bd?panel=share)).
 
 ## 📸 Capturas de Pantalla
 
