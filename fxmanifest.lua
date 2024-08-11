@@ -4,7 +4,7 @@ game 'gta5'
 name 'Nombre de tu recurso'
 description 'Descripción de tu recurso'
 author 'Tu nombre'
-version '2.0'
+version '2.1'
 
 ui_page 'nui/ui/index.html'
 

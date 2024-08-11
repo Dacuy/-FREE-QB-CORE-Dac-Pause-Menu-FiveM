@@ -1,13 +1,11 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local joinTime = 0
 
--- IsPlayerLoaded
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function()
     joinTime = os.time()
 end)
 
--- PlayerData Callback
 QBCore.Functions.CreateCallback('getPlayerData', function(source, cb)
     local xPlayer = QBCore.Functions.GetPlayer(source)
 
@@ -15,17 +13,13 @@ QBCore.Functions.CreateCallback('getPlayerData', function(source, cb)
         return
     end
 
-    -- Verificar el rol del usuario (admin, jugador, etc.)
     
-    -- Verificar el rango del trabajo
     local jobGrade = xPlayer.PlayerData.job.grade.name
 
-    -- Arreglar la obtención de dinero
     local money = {
         cash = xPlayer.PlayerData.money["cash"],
         bank = xPlayer.PlayerData.money["bank"],
     }
-    -- Datos recopilados
     local Datas = {
         name = xPlayer.PlayerData.charinfo.firstname .. " " .. xPlayer.PlayerData.charinfo.lastname,
         job = xPlayer.PlayerData.job.name,
@@ -42,7 +36,6 @@ QBCore.Functions.CreateCallback('jobCount', function(source, cb)
     local policeCount = 0
     local emsCount = 0
 
-    -- Iterar sobre todos los jugadores conectados
     for _, playerId in ipairs(GetPlayers()) do
         local player = QBCore.Functions.GetPlayer(tonumber(playerId))
         if player then
@@ -55,7 +48,6 @@ QBCore.Functions.CreateCallback('jobCount', function(source, cb)
         end
     end
 
-    -- Usa el callback para devolver los datos en una tabla
     cb({policeCount = policeCount, emsCount = emsCount})
 end)
 
