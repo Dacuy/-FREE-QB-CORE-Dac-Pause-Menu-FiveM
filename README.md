@@ -10,7 +10,10 @@ Un script para FiveM que permite gestionar un menú interactivo dentro del juego
 - **Animaciones Personalizadas**: El personaje usa una animación de tablet cuando el menú está abierto.
 - **Compatibilidad**: Funciona en servidores FiveM utilizando QBCore.
 
-  <video src='https://streamable.com/1i8imz'></video>
+## 🎥 Video
+
+Mira cómo funciona el script en este [video de demostración](https://streamable.com/1i8imz).
+
 
 ## 📦 Instalación
 
