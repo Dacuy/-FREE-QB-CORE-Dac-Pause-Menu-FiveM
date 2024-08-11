@@ -1,0 +1,1136 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Eliminar barras de desplazamiento horizontal */
+}
+
+/* Animaciones globales */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  display: none; /* Cambiar visibility por display */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.mostrar {
+  display: block; /* Cambiar visibility por display */
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.rectangle {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(30, 30, 30, 0.822); /* Mantener la transparencia */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.image {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  top: 2vw;
+  left: 2.5vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272202075002114048/gold-lion-logo-template-purple-260nw-1616089000_1.png?ex=66ba1e03&is=66b8cc83&hm=5c0fa09d35639a5a55f539bf82d928e8569d993d93f805640f0123c35461804c&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 14;
+  animation: bounceIn 1s ease;
+}
+
+.rectangle-1 {
+  position: absolute;
+  width: 7.3vw;
+  height: 7.3vw;
+  top: 2.2vw;
+  left: 2.5vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 6;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.rectangle-close {
+  position: absolute;
+  width: 7.3vw;
+  height: 7.3vw;
+  top: 2.2vw;
+  right: 2.5vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 40;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.rectangle-close:hover {
+  transition: 0.5s;
+  background: rgba(30, 30, 30, 0.15);
+}
+
+.image-2 {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  top: 2.1vw;
+  left: 2.8vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272202075002114048/gold-lion-logo-template-purple-260nw-1616089000_1.png?ex=66ba1e03&is=66b8cc83&hm=5c0fa09d35639a5a55f539bf82d928e8569d993d93f805640f0123c35461804c&)
+    no-repeat center;
+  background-size: cover;
+  opacity: 0.5; /* Simula el desenfoque */
+  z-index: 10;
+}
+
+.image-close {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  top: 2.2vw;
+  right: 2.5vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272183926101901435/close.png?ex=66ba0d1c&is=66b8bb9c&hm=4f4b52ca9da38cd06843e65cea98c88b4bae5122072a3563fc2f7a0092a1bc56&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 10;
+  animation: bounceIn 1s ease;
+}
+
+.dac {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 2.6vw;
+  top: 3.1vw;
+  left: 12vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 2.1vw;
+  font-weight: 700;
+  line-height: 2.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 15;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.line {
+  position: absolute;
+  width: 0.2vw;
+  height: 3.8vw;
+  top: 3.8vw;
+  left: 11.4vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271989900887195709/Novo_Projeto_1.png?ex=66b95868&is=66b806e8&hm=145630bbe68a2df1ec6d5255d20fe6f8b2134548519f247515c2693660299827&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 24;
+}
+
+.pause-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 2.6vw;
+  top: 5.5vw;
+  left: 12vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 2.1vw;
+  font-weight: 500;
+  line-height: 2.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 17;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.rectangle-3 {
+  position: absolute;
+  width: 26vw;
+  height: 28.6vw;
+  top: 11.8vw;
+  left: 2.8vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 1;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-4 {
+  position: absolute;
+  width: 26vw;
+  height: 4.4vw;
+  top: 11.8vw;
+  left: 2.8vw;
+  background: rgba(255, 169, 11, 0.34);
+  z-index: 4;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-5 {
+  position: absolute;
+  width: 10vw;
+  height: 3.6vw;
+  top: 11.8vw;
+  left: 2.8vw;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: 41;
+  filter: blur(5vw);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-6 {
+  position: absolute;
+  width: 33vw;
+  height: 19vw;
+  top: 11.8vw;
+  left: 34.7vw;
+  background: rgba(30, 30, 30, 0.15);
+  border-bottom: 0.05vw solid #9e1fc8;
+  z-index: 57;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: 0.5s;
+  animation: slideInLeft 0.7s ease-out;
+}
+
+.rectangle-6:hover {
+  transition: 0.5s;
+  background: rgba(158, 31, 200, 0.1);
+}
+
+.group {
+  position: absolute;
+  width: 20vw;
+  height: 19vw;
+  top: 11.8vw;
+  right: 32.3vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271990114226143273/toppng.com-ta5-map-mapa-de-los-santos-de-gta-5-976x1425.png?ex=66b9589b&is=66b8071b&hm=dcaeeff5dcb3c528afd1bc43af299593f4ba2de77ecda3ea10137a22ed0942b3&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 56;
+  background-color: transparent;
+  animation: fadeIn 0.8s ease-in-out;
+  filter: blur(2.5px);
+}
+
+.rectangle-7 {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 12.2vw;
+  left: 4.3vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 7;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-8 {
+  position: absolute;
+  width: 3.3vw;
+  height: 3.3vw;
+  top: 12.3vw;
+  left: 4.4vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 8;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.mapa {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 4.3vw;
+  top: 12.3vw;
+  left: 36vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 3.4vw;
+  font-weight: 700;
+  line-height: 4.3vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 60;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.user-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.6vw;
+  top: 12.4vw;
+  left: 8.8vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 18;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.user {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  top: 12.7vw;
+  left: 4.8vw;
+  z-index: 25;
+  overflow: hidden;
+}
+
+.icon {
+  position: relative;
+  width: 1.9vw;
+  height: 2.1vw;
+  margin: 0.2vw 0 0 0.3vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271989394651217982/User.png?ex=66b957f0&is=66b80670&hm=047c406cfb9d83dd09e87ecdc4a3ad1ac12fecbf989c7a0bf2c23102dda0c524&)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 26;
+}
+
+.user-role {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.6vw;
+  top: 14vw;
+  left: 8.9vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 23;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.mapa-del-juego {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 2.6vw;
+  top: 16.1vw;
+  left: 36vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 2.1vw;
+  font-weight: 500;
+  line-height: 2.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 61;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.rectangle-9 {
+  position: absolute;
+  width: 26vw;
+  height: 4.7vw;
+  top: 17.6vw;
+  left: 2.8vw;
+  background: rgba(74, 72, 72, 0.45);
+  border-bottom: 0.05vw solid #c88d1f;
+  z-index: 2;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-a {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 18.2vw;
+  left: 4.3vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 9;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-b {
+  position: absolute;
+  width: 3.3vw;
+  height: 3.3vw;
+  top: 18.3vw;
+  left: 4.4vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 10;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.mi-trabajo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1vw;
+  top: 18.4vw;
+  left: 8.9vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 0.78vw;
+  font-weight: 400;
+  line-height: 1vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 19;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.briefcase {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  top: 18.5vw;
+  left: 4.8vw;
+  z-index: 27;
+  overflow: hidden;
+}
+
+.icon-c {
+  position: relative;
+  width: 2.3vw;
+  height: 2.1vw;
+  margin: 0.2vw 0 0 0.1vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271990916718268467/Briefcase.png?ex=66b9595a&is=66b807da&hm=f7f50ea9022879e0ca8e263c2501825fb251ef37187b3bd6412dc68f2e210ea6&)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 28;
+}
+
+.user-job {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.6vw;
+  top: 19.5vw;
+  left: 8.8vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 21;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-d {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  top: 22.4vw;
+  left: 36vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 58;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-e {
+  position: absolute;
+  width: 6.7vw;
+  height: 6.7vw;
+  top: 22.6vw;
+  left: 36.2vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 59;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-f {
+  position: absolute;
+  width: 26vw;
+  height: 4.7vw;
+  top: 23.1vw;
+  left: 2.8vw;
+  background: rgba(70, 96, 72, 0.2);
+  border-bottom: 0.05vw solid #c88d1f;
+  z-index: 3;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.map {
+  position: absolute;
+  width: 4.8vw;
+  height: 4.8vw;
+  top: 23.4vw;
+  left: 37vw;
+  z-index: 62;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.vector {
+  position: relative;
+  width: 4.8vw;
+  height: 4.8vw;
+  margin: 0.001vw 0 0 0;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991174873350144/map.png?ex=66b95998&is=66b80818&hm=4164419815b9fb75a7a263649f5f0018aebbb6eeb304c26eb3de763c8691e8c5&)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 63;
+}
+
+.rectangle-10 {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 23.7vw;
+  left: 4.2vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 11;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-11 {
+  position: absolute;
+  width: 3.3vw;
+  height: 3.3vw;
+  top: 23.8vw;
+  left: 4.4vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 12;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.dinero-en-metalico {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1vw;
+  top: 24.1vw;
+  left: 8.9vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 0.78vw;
+  font-weight: 400;
+  line-height: 1vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 20;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.cash-stack {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  top: 24.1vw;
+  left: 4.7vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991055474098217/cash-stack.png?ex=66b9597c&is=66b807fc&hm=9171761a149f34b13f28e272b151e7bfc521358b46a0333d862a7280592f8925&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 34;
+  overflow: hidden;
+}
+
+.user-cash-q {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.6vw;
+  top: 25.2vw;
+  left: 8.8vw;
+  color: rgba(32, 255, 47, 0.48);
+  font-family: Outfit, var(--default-font-family);
+  font-size: 1.25vw;
+  font-weight: 600;
+  line-height: 1.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 22;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-12 {
+  position: absolute;
+  width: 26vw;
+  height: 4.7vw;
+  top: 28.8vw;
+  left: 2.8vw;
+  background: rgba(70, 96, 72, 0.2);
+  border-bottom: 0.05vw solid #c88d1f;
+  z-index: 35;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-13 {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 29.4vw;
+  left: 4.2vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 36;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-14 {
+  position: absolute;
+  width: 3.3vw;
+  height: 3.3vw;
+  top: 29.5vw;
+  left: 4.4vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 37;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.dinero-en-el-banco {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1vw;
+  top: 30.1vw;
+  left: 8.9vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 0.78vw;
+  font-weight: 400;
+  line-height: 1vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 38;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.credit-card {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  top: 30.1vw;
+  left: 4.7vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991386417139773/credit-card.png?ex=66b959ca&is=66b8084a&hm=a1e8be554d12c834263ebeec6839d59bc223246d555da987af1d3f7749b5d2ba&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 40;
+  overflow: hidden;
+}
+
+.user-money-q {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.6vw;
+  top: 31.2vw;
+  left: 8.8vw;
+  color: rgba(32, 255, 47, 0.48);
+  font-family: Outfit, var(--default-font-family);
+  font-size: 1.25vw;
+  font-weight: 600;
+  line-height: 1.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 39;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-16 {
+  position: absolute;
+  width: 61.9vw;
+  height: 9.1vw;
+  top: 31.6vw;
+  left: 34.7vw;
+  background: rgba(30, 30, 30, 0.41);
+  border-bottom: 0.05vw solid #9e1fc8;
+  z-index: 64;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: slideInRight 0.7s ease-out;
+}
+
+.rectangle-16:hover {
+  transition: 0.5s;
+  background: rgba(158, 31, 200, 0.1);
+}
+
+.ajustes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 4.3vw;
+  top: 32.2vw;
+  left: 36vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 3.4vw;
+  font-weight: 700;
+  line-height: 4.3vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 67;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.rectangle-17 {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  top: 33vw;
+  left: 88.3vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 65;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-18 {
+  position: absolute;
+  width: 6.7vw;
+  height: 6.7vw;
+  top: 33.2vw;
+  left: 88.5vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 66;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.gear-wide-connected {
+  position: absolute;
+  width: 4.8vw;
+  height: 4.8vw;
+  top: 34.2vw;
+  left: 89.6vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991638473969777/gear-wide-connected.png?ex=66b95a07&is=66b80887&hm=f893dea17de6dbad6577b48f7a3c0f84186ed503413da5a057ddabf3defd6bd6&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 69;
+  overflow: hidden;
+}
+
+.rectangle-19 {
+  position: absolute;
+  width: 26vw;
+  height: 4.7vw;
+  top: 36.3vw;
+  left: 2.8vw;
+  background: rgba(74, 72, 72, 0.45);
+  border-bottom: 0.05vw solid #c88d1f;
+  z-index: 29;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-1a {
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  top: 36.8vw;
+  left: 4.2vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 30;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-1b {
+  position: absolute;
+  width: 3.3vw;
+  height: 3.3vw;
+  top: 36.9vw;
+  left: 4.4vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 31;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.mi-id {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1vw;
+  top: 37.1vw;
+  left: 8.8vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 0.78vw;
+  font-weight: 400;
+  line-height: 1vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 32;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.info-circle {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  top: 37.2vw;
+  left: 4.7vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991554449342484/info-circle.png?ex=66b959f3&is=66b80873&hm=aef8030152d47f20f259639cc355bf981ac8075da11100574fce52b3828dda2c&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 45;
+  overflow: hidden;
+}
+
+.configuraciones-del-juego {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 3.1vw;
+  top: 37.3vw;
+  left: 36vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 2.5vw;
+  font-weight: 500;
+  line-height: 3.1vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 68;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.user-id {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 1.6vw;
+  top: 38.2vw;
+  left: 8.8vw;
+  color: #ffffff;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 1.25vw;
+  font-weight: 600;
+  line-height: 1.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 33;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-1c {
+  position: absolute;
+  width: 10vw;
+  height: 3.6vw;
+  top: 39.7vw;
+  left: 13.5vw;
+  background: rgba(255, 255, 255, 0.38);
+  z-index: 42;
+  filter: blur(5vw);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-1d {
+  position: absolute;
+  width: 10vw;
+  height: 3.6vw;
+  top: 47.4vw;
+  left: 2.8vw;
+  background: rgba(255, 9, 9, 0.44);
+  z-index: 43;
+  filter: blur(5vw);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-1e {
+  position: absolute;
+  width: 26vw;
+  height: 6.4vw;
+  top: 47.7vw;
+  left: 70.6vw;
+  cursor: pointer;
+  background: rgba(8, 58, 11, 0.33);
+  border: none;
+  border-bottom: 0.05vw solid #9e1fc8;
+  z-index: 48;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-1f {
+  position: absolute;
+  width: 12.6vw;
+  height: 4.5vw;
+  top: 47.9vw;
+  left: 84vw;
+  background: rgba(32, 255, 47, 0.48);
+  z-index: 53;
+  filter: blur(5vw);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-20 {
+  position: absolute;
+  width: 26.1vw;
+  height: 6.4vw;
+  top: 48.3vw;
+  left: 2.8vw;
+  cursor: pointer;
+  background: rgba(58, 8, 8, 0.33);
+  border: none;
+  border-bottom: 0.05vw solid #9e1fc8;
+  z-index: 50;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  animation: slideInLeft 0.7s ease-out;
+}
+
+.rectangle-20:hover {
+  background: rgba(104, 9, 9, 0.59);
+  transition: 0.5s;
+}
+
+.rectangle-21 {
+  position: absolute;
+  width: 12.7vw;
+  height: 4.5vw;
+  top: 48.4vw;
+  left: 15.8vw;
+  background: rgba(255, 9, 9, 0.25);
+  z-index: 47;
+  filter: blur(5vw);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-22 {
+  position: absolute;
+  width: 4.4vw;
+  height: 4.4vw;
+  top: 48.7vw;
+  left: 72vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 51;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.rectangle-23 {
+  position: absolute;
+  width: 4.1vw;
+  height: 4.1vw;
+  top: 48.8vw;
+  left: 72.1vw;
+  background: rgba(30, 30, 30, 0.45);
+  z-index: 52;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.server-players {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 4.1vw;
+  top: 49vw;
+  left: 80vw;
+  color: #32e73e;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 2.5vw;
+  font-weight: 600;
+  line-height: 3.1vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 49;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.cloud {
+  position: absolute;
+  width: 3.1vw;
+  height: 3.1vw;
+  top: 49.5vw;
+  left: 72.8vw;
+  z-index: 54;
+  overflow: hidden;
+}
+
+.vector-24 {
+  position: relative;
+  width: 3.1vw;
+  height: 3.1vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991971241787435/cloud.png?ex=66b95a56&is=66b808d6&hm=5aadcaff3aa7604e3ee30f3f3bed308f636a4533d95546185bfadb2d85aab526&)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 55;
+}
+
+.rectangle-25 {
+  position: absolute;
+  width: 12.6vw;
+  height: 4.5vw;
+  top: 50.1vw;
+  left: 70.6vw;
+  background: rgba(32, 255, 47, 0.48);
+  z-index: 50;
+  filter: blur(5vw);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.exit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 3.3vw;
+  top: 50.3vw;
+  left: 14.2vw;
+  color: #ff4141;
+  font-family: Outfit, var(--default-font-family);
+  font-size: 2.1vw;
+  font-weight: 700;
+  line-height: 2.6vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 51;
+}
+
+.door-open {
+  position: absolute;
+  width: 3.1vw;
+  height: 3.1vw;
+  top: 49.8vw;
+  left: 10.3vw;
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271992484255367188/door-open.png?ex=66b95ad0&is=66b80950&hm=ffee5e6e7605516e760414abe5e14dd0182c3e72eebce02749b8e5b3621d3476&)
+    no-repeat center;
+  background-size: cover;
+  z-index: 51;
+  overflow: hidden;
+}
+
+.rectangle-26 {
+  position: absolute;
+  width: 12.7vw;
+  height: 4.5vw;
+  top: 51.1vw;
+  left: 2.8vw;
+  background: rgba(255, 9, 9, 0.25);
+  z-index: 44;
+  filter: blur(5vw);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  /* Responsivo para tablets y dispositivos más grandes, excepto teléfonos */
+  .rectangle {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
