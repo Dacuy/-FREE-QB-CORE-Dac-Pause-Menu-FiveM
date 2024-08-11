@@ -64,8 +64,8 @@ window.addEventListener('message', (event) => {
     userNameElement.textContent = datos.playerDatas.name
     userRoleElement.textContent = datos.playerDatas.from
     userJobElement.textContent = datos.playerDatas.job +' - '+ datos.playerDatas.jobGrade
-    userCashElement.textContent = datos.playerDatas.cash;
-    userMoneyElement.textContent = datos.playerDatas.money;
+    userCashElement.textContent = '$ '+datos.playerDatas.cash;
+    userMoneyElement.textContent = '$ '+ datos.playerDatas.money;
     userIdElement.textContent = datos.playerDatas.id;
     serverActivePlayers.textContent = datos.activePlayersNumber + '/120'
   }
