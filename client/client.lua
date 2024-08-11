@@ -7,12 +7,13 @@ Citizen.CreateThread(function()
         local playerDataSent = false
         local playTimeSent = false
 
+        local playerPed = PlayerPedId()
+        local inVehicle = IsPedInAnyVehicle(playerPed, false)
+
         -- Control de radar y pausa del menú
-        if not openActive then 
-            DisplayRadar(true)
-            if isMenuActive then
-                SetPauseMenuActive(true)
-            end
+        if not openActive and not isMenuActive then
+            DisplayRadar(inVehicle) -- Show radar only if the player is in a vehicle
+            SetPauseMenuActive(false)
         else
             DisplayRadar(false)
             SetPauseMenuActive(false)
@@ -20,7 +21,6 @@ Citizen.CreateThread(function()
 
         -- Manejo de apertura y cierre del menú
         if (IsControlJustPressed(1, 200) or IsControlJustPressed(1, 199)) and not openActive then 
-            -- Solicita el conteo de trabajos al servidor
             openActive = true
             isMenuActive = false
             SetPauseMenuActive(false)
@@ -62,6 +62,12 @@ Citizen.CreateThread(function()
             TransitionFromBlurred(1000)
         end
 
+        -- Reanudar juego con el botón de retroceso (Backspace)
+        if IsControlJustReleased(1, 177) and isMenuActive then
+            QBCore.Functions.resumeGame()
+            TransitionFromBlurred(1000)
+        end
+
         Wait(0)
     end
 end)
@@ -72,8 +78,12 @@ function QBCore.Functions.resumeGame()
     isMenuActive = false
     SendNUIMessage({action = "uiDisabled"})
     SetNuiFocus(false, false)
-end
 
+    -- Restore radar based on vehicle state
+    local playerPed = PlayerPedId()
+    local inVehicle = IsPedInAnyVehicle(playerPed, false)
+    DisplayRadar(inVehicle)
+end
 
 RegisterNUICallback('resumeGame', QBCore.Functions.resumeGame)
 
