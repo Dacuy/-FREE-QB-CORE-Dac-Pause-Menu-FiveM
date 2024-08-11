@@ -38,6 +38,26 @@ QBCore.Functions.CreateCallback('getPlayerData', function(source, cb)
     cb(Datas)
 end)
 
+QBCore.Functions.CreateCallback('jobCount', function(source, cb)
+    local policeCount = 0
+    local emsCount = 0
+
+    -- Iterar sobre todos los jugadores conectados
+    for _, playerId in ipairs(GetPlayers()) do
+        local player = QBCore.Functions.GetPlayer(tonumber(playerId))
+        if player then
+            local jobName = player.PlayerData.job.name
+            if jobName == "police" then
+                policeCount = policeCount + 1
+            elseif jobName == "ambulance" then
+                emsCount = emsCount + 1
+            end
+        end
+    end
+
+    -- Usa el callback para devolver los datos en una tabla
+    cb({policeCount = policeCount, emsCount = emsCount})
+end)
 
 
 -- Disconnect Callback
@@ -45,14 +65,3 @@ RegisterNetEvent('disconnectPlayer', function()
     local src = source
     QBCore.Functions.Kick(src,'Te saliste pete')
 end)
-
--- GetPlayTime Callback
-RegisterNetEvent('getPlayTime', function(source, cb)
-    local playerTime = QBCore.Functions.ConvertToMinutes(os.time() - joinTime)
-    cb(playerTime)
-end)
-
-
-function QBCore.Functions.ConvertToMinutes(sec)
-    return math.floor((sec % 3600) / 60)
-end

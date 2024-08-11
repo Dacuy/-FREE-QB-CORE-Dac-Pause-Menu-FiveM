@@ -19,7 +19,8 @@ Citizen.CreateThread(function()
         end 
 
         -- Manejo de apertura y cierre del menú
-        if (IsControlJustPressed(1,200) or IsControlJustPressed(1,199)) and not openActive then 
+        if (IsControlJustPressed(1, 200) or IsControlJustPressed(1, 199)) and not openActive then 
+            -- Solicita el conteo de trabajos al servidor
             openActive = true
             isMenuActive = false
             SetPauseMenuActive(false)
@@ -35,6 +36,14 @@ Citizen.CreateThread(function()
                         playerDatas = datas,
                         activePlayersNumber = #GetActivePlayers()
                     })
+                    QBCore.Functions.TriggerCallback('jobCount', function(data)
+                        SendNUIMessage({
+                            type = 'jobCount',
+                            emsCount = data.emsCount,
+                            policeCount = data.policeCount
+                        })
+                        
+                    end)
                 end)
                 playerDataSent = true
             end
@@ -48,7 +57,7 @@ Citizen.CreateThread(function()
         end 
 
         -- Reanudar juego con ESCAPE
-        if IsControlJustPressed(1,200) and IsPauseMenuActive() then 
+        if IsControlJustPressed(1, 200) and IsPauseMenuActive() then 
             QBCore.Functions.resumeGame()
             TransitionFromBlurred(1000)
         end
@@ -57,7 +66,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Functions
+-- Funciones
 function QBCore.Functions.resumeGame()
     openActive = false
     isMenuActive = false
@@ -65,7 +74,7 @@ function QBCore.Functions.resumeGame()
     SetNuiFocus(false, false)
 end
 
--- Callbacks
+
 RegisterNUICallback('resumeGame', QBCore.Functions.resumeGame)
 
 RegisterNUICallback('closeGui', function()

@@ -11,7 +11,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Eliminar barras de desplazamiento horizontal */
+  overflow-x: hidden;
 }
 
 /* Animaciones globales */
@@ -63,12 +63,12 @@ body {
   position: relative;
   margin: 0;
   overflow: hidden;
-  display: none; /* Cambiar visibility por display */
+  display: none;
   animation: fadeIn 0.8s ease-in-out;
 }
 
 .mostrar {
-  display: block; /* Cambiar visibility por display */
+  display: block;
 }
 
 .main-container,
@@ -89,7 +89,7 @@ button {
   height: 100vh;
   top: 0;
   left: 0;
-  background: rgba(30, 30, 30, 0.822); /* Mantener la transparencia */
+  background: rgba(30, 30, 30, 0.822);
   animation: fadeIn 0.8s ease-in-out;
 }
 
@@ -132,8 +132,8 @@ button {
 }
 
 .rectangle-close:hover {
-  transition: 0.5s;
   background: rgba(30, 30, 30, 0.15);
+  transition: 0.5s;
 }
 
 .image-2 {
@@ -145,7 +145,7 @@ button {
   background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272202075002114048/gold-lion-logo-template-purple-260nw-1616089000_1.png?ex=66ba1e03&is=66b8cc83&hm=5c0fa09d35639a5a55f539bf82d928e8569d993d93f805640f0123c35461804c&)
     no-repeat center;
   background-size: cover;
-  opacity: 0.5; /* Simula el desenfoque */
+  opacity: 0.5;
   z-index: 10;
 }
 
@@ -267,9 +267,103 @@ button {
   animation: slideInLeft 0.7s ease-out;
 }
 
-.rectangle-6:hover {
+.rectangle-pol {
+  position: absolute;
+  width: 27.969vw;
+  height: 8vw;
+  top: 11.8vw;
+  left: 69vw;
+  background: rgba(30, 30, 30, 0.15);
+  border-bottom: 0.05vw solid #9e1fc8;
+  z-index: 57;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
   transition: 0.5s;
+  animation: slideInLeft 0.7s ease-out;
+}
+
+.pol-span {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4.3vw;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 60;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.6s;
+  margin-left: 1rem;
+}
+
+.pol-span2 {
+  position: relative;
+  top: -3.5rem;
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 1rem;
+}
+
+.pol-avaiable {
+  position: relative;
+  top: -3.5rem;
+  right: -6rem;
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.ems-avaiable {
+  position: relative;
+  top: -3.5rem;
+  right: -6rem;
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rectangle-ems {
+  position: absolute;
+  width: 27.969vw;
+  height: 8vw;
+  top: 22.7vw;
+  left: 69vw;
+  background: rgba(30, 30, 30, 0.15);
+  border-bottom: 0.05vw solid #9e1fc8;
+  z-index: 57;
+  box-shadow: 0 0.2vw 0.2vw 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: 0.5s;
+  animation: slideInLeft 0.7s ease-out;
+}
+
+.rectangle-pol:hover {
   background: rgba(158, 31, 200, 0.1);
+  transition: 0.5s;
+}
+
+.rectangle-ems:hover {
+  background: rgba(158, 31, 200, 0.1);
+  transition: 0.5s;
+}
+
+.rectangle-6:hover {
+  background: rgba(158, 31, 200, 0.1);
+  transition: 0.5s;
 }
 
 .group {
@@ -745,8 +839,8 @@ button {
 }
 
 .rectangle-16:hover {
-  transition: 0.5s;
   background: rgba(158, 31, 200, 0.1);
+  transition: 0.5s;
 }
 
 .ajustes {
@@ -882,7 +976,7 @@ button {
   justify-content: flex-start;
   position: absolute;
   height: 3.1vw;
-  top: 37.3vw;
+  top: 36vw;
   left: 36vw;
   color: #ffffff;
   font-family: Outfit, var(--default-font-family);
@@ -944,7 +1038,7 @@ button {
   position: absolute;
   width: 26vw;
   height: 6.4vw;
-  top: 47.7vw;
+  top: 48.3vw;
   left: 70.6vw;
   cursor: pointer;
   background: rgba(8, 58, 11, 0.33);
@@ -1004,7 +1098,7 @@ button {
   position: absolute;
   width: 4.4vw;
   height: 4.4vw;
-  top: 48.7vw;
+  top: 49.3vw;
   left: 72vw;
   background: rgba(30, 30, 30, 0.45);
   z-index: 51;
@@ -1016,7 +1110,7 @@ button {
   position: absolute;
   width: 4.1vw;
   height: 4.1vw;
-  top: 48.8vw;
+  top: 49.4vw;
   left: 72.1vw;
   background: rgba(30, 30, 30, 0.45);
   z-index: 52;
@@ -1030,7 +1124,7 @@ button {
   justify-content: flex-start;
   position: absolute;
   height: 4.1vw;
-  top: 49vw;
+  top: 50vw;
   left: 80vw;
   color: #32e73e;
   font-family: Outfit, var(--default-font-family);
@@ -1063,6 +1157,8 @@ button {
     no-repeat center;
   background-size: 100% 100%;
   z-index: 55;
+  margin-top: 10px;
+  margin-left: -1px;
 }
 
 .rectangle-25 {
@@ -1120,17 +1216,163 @@ button {
   animation: fadeIn 0.8s ease-in-out;
 }
 
-@media (min-width: 1024px) {
+/* Media Queries */
+
+@media (min-width: 1023px) and (max-width: 1441px) {
   /* Responsivo para tablets y dispositivos más grandes, excepto teléfonos */
   .rectangle {
     width: 100vw;
     height: 100vh;
   }
+  .pol-avaiable{
+    right: -2rem;
+    font-size: 3rem;
+    top: -1.9rem;
+  }
+  .ems-avaiable{
+    right: -2rem;
+    font-size: 3rem;
+    top: -1.9rem;
+  }
+  .pol-span{
+    font-size: 1.5rem;
+    top: 0.5rem;
+  }
+  .pol-span2{
+    font-size: 1.5rem;
+    top: -1.8rem;
+  }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1439px) and (max-width: 1700px) {
   .main-container {
     width: 100vw;
     height: 100vh;
+  }
+  .pol-avaiable{
+    right: -3rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .ems-avaiable{
+    right: -3rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .pol-span{
+    font-size: 2.2rem;
+    top: 0.5rem;
+  }
+  .pol-span2{
+    font-size: 2.2rem;
+    top: -3.5rem;
+  }
+
+  button{
+    border: 0px;
+  }
+
+}
+@media (min-width: 1439px) and (max-width: 1700px) {
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .pol-avaiable{
+    right: -3rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .ems-avaiable{
+    right: -3rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .pol-span{
+    font-size: 2.2rem;
+    top: 0.5rem;
+  }
+  .pol-span2{
+    font-size: 2.2rem;
+    top: -3.5rem;
+  }
+
+}
+@media (min-width: 1700px) and (max-width: 1920px) {
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .pol-avaiable{
+    right: -6.5rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .ems-avaiable{
+    right: -6.5rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .pol-avaiable{
+    right: -6.5rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .pol-span{
+    font-size: 2.2rem;
+    top: 0.5rem;
+  }
+  .pol-span2{
+    font-size: 2.2rem;
+    top: -3.5rem;
+  }
+
+}
+@media (min-width: 1919px) and (max-width: 2558px) {
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .pol-avaiable{
+    right: -3.5rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .ems-avaiable{
+    right: -3.5rem;
+    font-size: 5rem;
+    top: -3.5rem;
+  }
+  .pol-span{
+    font-size: 3rem;
+    top: 0.5rem;
+  }
+  .pol-span2{
+    font-size: 3rem;
+    top: -3.5rem;
+  }
+}
+@media (min-width: 2560px) and (max-width: 5000px) {
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .pol-avaiable{
+    right: -4rem;
+    font-size: 8rem;
+    top: -5.5rem;
+  }
+  .ems-avaiable{
+    right: -4rem;
+    font-size: 8rem;
+    top: -5.5rem;
+  }
+  .pol-span{
+    font-size: 4rem;
+    top: 0.5rem;
+  }
+  .pol-span2{
+    font-size: 4rem;
+    top: -3.5rem;
   }
 }
