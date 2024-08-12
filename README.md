@@ -1,6 +1,6 @@
 # FiveM Menu de Pausa ------ QBCORE
 
-![FiveM Menu Script](https://img.shields.io/badge/version-1.0.0-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue)
+![FiveM Menu Script](https://img.shields.io/badge/version-2.1.0-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 Un script para FiveM que permite gestionar un menú interactivo dentro del juego con animaciones personalizadas y opciones de configuración. Ideal para servidores que buscan una experiencia de usuario más fluida y enriquecida.
 
