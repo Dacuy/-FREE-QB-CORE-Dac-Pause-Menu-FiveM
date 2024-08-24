@@ -1,4 +1,3 @@
-Here's an improved and translated version of your description in English:
 
 ---
 
@@ -7,6 +6,14 @@ Here's an improved and translated version of your description in English:
 ![FiveM Menu Script](https://img.shields.io/badge/version-2.1.0-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 A script for FiveM that provides an interactive in-game menu with custom animations and configuration options. Ideal for servers looking to enhance user experience with a more fluid and enriched interface.
+
+## 🌐 Languages Avaiable:
+-**ENGLISH**
+-**SPANISH**
+-**PORTUGUESE**
+-**FRENCH**
+-**RUSSIAN**
+
 
 ## 🚀 Features
 
@@ -21,7 +28,7 @@ A script for FiveM that provides an interactive in-game menu with custom animati
 
 ![Gif Low Quality](https://github.com/Dacuy/QB-Core-Dac-Pause-Menu/blob/main/nui/ui/assets/dacpausemenu2.0.gif)
 
-See the script in action with better quality in this [demonstration video](https://www.veed.io/view/41079bc4-52fd-4ee0-bb92-82bd2acd21bd?panel=share).
+See the script in action with better quality in this [demonstration video](https://youtu.be/hqTu5igBQCg).
 
 ## 📸 Screenshots
 
