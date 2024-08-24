@@ -51,5 +51,5 @@ end)
 
 -- Disconnect Callback
 RegisterNetEvent('disconnectPlayer', function()
-    QBCore.Functions.Kick(source, 'Te saliste pete')
+    QBCore.Functions.Kick(source, 'Disconnected from server')
 end)
