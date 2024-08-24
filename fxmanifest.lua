@@ -1,14 +1,15 @@
 fx_version 'cerulean'
 game 'gta5'
 
-name 'Nombre de tu recurso'
-description 'Descripción de tu recurso'
-author 'Tu nombre'
+name 'Dac Pause Menu'
+description 'qb-core script'
+author 'dac_'
 version '2.1'
 
 ui_page 'nui/ui/index.html'
 
 files {
+    'nui/ui/assets/**.png',
     'nui/ui/assets/**.svg',
     'nui/ui/assets/**.wav',
     'nui/ui/index.html',
@@ -16,5 +17,9 @@ files {
     'nui/ui/styles.css'
 }
 
-client_script 'client/client.lua'
+client_scripts {
+    'client/client.lua',
+    'config.lua'
+}
+
 server_script 'server/server.lua'

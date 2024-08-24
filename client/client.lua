@@ -4,9 +4,6 @@ local isMenuActive = false
 
 Citizen.CreateThread(function()
     while true do
-        local playerDataSent = false
-        local playTimeSent = false
-
         local playerPed = PlayerPedId()
         local inVehicle = IsPedInAnyVehicle(playerPed, false)
 
@@ -24,34 +21,32 @@ Citizen.CreateThread(function()
             SetPauseMenuActive(false)
             DisplayRadar(false)
 
-            SendNUIMessage({action = "uiEnabled"})
+            SendNUIMessage({
+                action = "uiEnabled",
+                logo = Config.Server_Logo,
+                language = Config.Language,
+                servername = Config.Server_Name
+            })
             SetNuiFocus(true, true)
             
-            if not playerDataSent then
-                QBCore.Functions.TriggerCallback('getPlayerData', function(datas)
+            QBCore.Functions.TriggerCallback('getPlayerData', function(datas)
+                SendNUIMessage({
+                    type = 'serverInfo',
+                    playerDatas = datas,
+                    activePlayersNumber = #GetActivePlayers()
+                })
+                QBCore.Functions.TriggerCallback('jobCount', function(data)
                     SendNUIMessage({
-                        type = 'serverInfo',
-                        playerDatas = datas,
-                        activePlayersNumber = #GetActivePlayers()
+                        type = 'jobCount',
+                        emsCount = data.emsCount,
+                        policeCount = data.policeCount
                     })
-                    QBCore.Functions.TriggerCallback('jobCount', function(data)
-                        SendNUIMessage({
-                            type = 'jobCount',
-                            emsCount = data.emsCount,
-                            policeCount = data.policeCount
-                        })
-                        
-                    end)
                 end)
-                playerDataSent = true
-            end
+            end)
 
-            if not playTimeSent then
-                QBCore.Functions.TriggerCallback('getPlayTime', function(time)
-                    SendNUIMessage({onlinePlayTime = time})
-                end)
-                playTimeSent = true
-            end
+            QBCore.Functions.TriggerCallback('getPlayTime', function(time)
+                SendNUIMessage({onlinePlayTime = time})
+            end)
         end 
 
         if IsControlJustPressed(1, 200) and IsPauseMenuActive() then 
@@ -81,10 +76,7 @@ function QBCore.Functions.resumeGame()
 end
 
 RegisterNUICallback('resumeGame', QBCore.Functions.resumeGame)
-
-RegisterNUICallback('closeGui', function()
-    QBCore.Functions.resumeGame()
-end)
+RegisterNUICallback('closeGui', QBCore.Functions.resumeGame)
 
 RegisterNUICallback('showMap', function()
     ActivateFrontendMenu(GetHashKey('FE_MENU_VERSION_MP_PAUSE'), 0, -1)

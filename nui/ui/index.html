@@ -10,30 +10,31 @@
   <body>
     <div class="main-container" id="main-cont">
       <div class="rectangle"></div>
-      <div class="image"></div>
+      <div id="logo1" class="image"></div>
       <div class="rectangle-1"></div>
       <div class="rectangle-close"></div>
       <div class="image-close"></div>
-      <div class="image-2"></div>
-      <span class="dac">DAC</span>
+      <div id="logo2" class="image-2"></div>
+      <span id="Name1" class="dac">DAC</span>
       <div class="line"></div>
-      <span class="pause-menu">PAUSE MENU</span>
+      <span id="Name2" class="pause-menu">PAUSE MENU</span>
       <div class="rectangle-3"></div>
       <div class="rectangle-4"></div>
       <div class="rectangle-5"></div>
       <div class="containerEms">
         <div class="rectangle-pol">
-          <span class="pol-span">POLICÍAS</span>
-          <span class="pol-span2">DISPONIBLES</span>
+          <span id="police" class="pol-span">POLICÍAS</span>
+          <!-- Corregido: id="police_dispo" -->
+          <span id="police_dispo" class="pol-span2">DISPONIBLES</span>
           <span class="pol-avaiable">10</span>
         </div>
         <div class="rectangle-ems">
           <span class="pol-span">EMS</span>
-          <span class="pol-span2">DISPONIBLES</span>
+          <!-- El id se cambió para el uso correcto en el JS -->
+          <span id="police_dispo2" class="pol-span2">DISPONIBLES</span>
           <span class="ems-avaiable">5</span>
         </div>
       </div>
-
 
       <button class="map-button">
         <div class="rectangle-6"></div>
@@ -43,8 +44,8 @@
         <div class="map">
           <div class="vector"></div>
         </div>
-        <span class="mapa">MAPA</span>
-        <span class="mapa-del-juego">MAPA DEL JUEGO</span>
+        <span id="map" class="mapa">MAPA</span>
+        <span id="map2" class="mapa-del-juego">MAPA DEL JUEGO</span>
       </button>
 
       <!-- Botón para los Ajustes -->
@@ -53,8 +54,8 @@
         <div class="rectangle-17"></div>
         <div class="rectangle-18"></div>
         <div class="gear-wide-connected"></div>
-        <span class="ajustes">AJUSTES</span>
-        <span class="configuraciones-del-juego">CONFIGURACIONES DEL JUEGO</span>
+        <span id="sets" class="ajustes">AJUSTES</span>
+        <span id="sets2" class="configuraciones-del-juego">CONFIGURACIONES DEL JUEGO</span>
       </button>
 
       <div class="rectangle-7"></div>
@@ -65,25 +66,25 @@
       <div class="rectangle-9"></div>
       <div class="rectangle-a"></div>
       <div class="rectangle-b"></div>
-      <span class="mi-trabajo">Mi trabajo:</span>
+      <span id="work" class="mi-trabajo">Mi trabajo:</span>
       <div class="briefcase"><div class="icon-c"></div></div>
-      <span class="user-job">Police Lieutneant II</span>
+      <span class="user-job">Police Lieutenant II</span>
       <div class="rectangle-f"></div>
       <div class="rectangle-10"></div>
       <div class="rectangle-11"></div>
-      <span class="dinero-en-metalico">Dinero en metalico:</span>
+      <span id="cash" class="dinero-en-metalico">Dinero en metálico:</span>
       <div class="cash-stack"></div>
       <span class="user-cash-q">$ 20000</span>
       <div class="rectangle-12"></div>
       <div class="rectangle-13"></div>
       <div class="rectangle-14"></div>
-      <span class="dinero-en-el-banco">Dinero en el banco:</span>
+      <span id="bank" class="dinero-en-el-banco">Dinero en el banco:</span>
       <div class="credit-card"></div>
       <span class="user-money-q">$ 20000</span>
       <div class="rectangle-19"></div>
       <div class="rectangle-1a"></div>
       <div class="rectangle-1b"></div>
-      <span class="mi-id">Mi id:</span>
+      <span id="miId" class="mi-id">Mi id:</span>
       <div class="info-circle"></div>
       <span class="user-id">101</span>
       <div class="rectangle-1c"></div>
@@ -97,7 +98,7 @@
       <span class="server-players">35/120</span>
       <div class="cloud"><div class="vector-24"></div></div>
       <div class="rectangle-25"></div>
-      <span class="exit">SALIR</span>
+      <span id="exit" class="exit">SALIR</span>
       <div class="door-open"></div>
       <div class="rectangle-26"></div>
     </div>

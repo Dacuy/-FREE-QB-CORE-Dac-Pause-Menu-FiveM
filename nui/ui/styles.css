@@ -99,7 +99,7 @@ button {
   height: 7vw;
   top: 2vw;
   left: 2.5vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272202075002114048/gold-lion-logo-template-purple-260nw-1616089000_1.png?ex=66ba1e03&is=66b8cc83&hm=5c0fa09d35639a5a55f539bf82d928e8569d993d93f805640f0123c35461804c&)
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272202075002114048/gold-lion-logo-template-purple-260nw-1616089000_1.png?ex=66ca98c3&is=66c94743&hm=c07c80d40ff0d5a6b061427ecb9a29993530f1818b72da80a45d9c5b9600645c&) /*logo */
     no-repeat center;
   background-size: cover;
   z-index: 14;
@@ -142,7 +142,7 @@ button {
   height: 7vw;
   top: 2.1vw;
   left: 2.8vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272202075002114048/gold-lion-logo-template-purple-260nw-1616089000_1.png?ex=66ba1e03&is=66b8cc83&hm=5c0fa09d35639a5a55f539bf82d928e8569d993d93f805640f0123c35461804c&)
+  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272202075002114048/gold-lion-logo-template-purple-260nw-1616089000_1.png?ex=66ca98c3&is=66c94743&hm=c07c80d40ff0d5a6b061427ecb9a29993530f1818b72da80a45d9c5b9600645c&) /*logo */
     no-repeat center;
   background-size: cover;
   opacity: 0.5;
@@ -155,7 +155,7 @@ button {
   height: 7vw;
   top: 2.2vw;
   right: 2.5vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1272183926101901435/close.png?ex=66ba0d1c&is=66b8bb9c&hm=4f4b52ca9da38cd06843e65cea98c88b4bae5122072a3563fc2f7a0092a1bc56&)
+  background: url(./assets/close.png)
     no-repeat center;
   background-size: cover;
   z-index: 10;
@@ -189,7 +189,7 @@ button {
   height: 3.8vw;
   top: 3.8vw;
   left: 11.4vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271989900887195709/Novo_Projeto_1.png?ex=66b95868&is=66b806e8&hm=145630bbe68a2df1ec6d5255d20fe6f8b2134548519f247515c2693660299827&)
+  background: url(./assets/linea.png)
     no-repeat center;
   background-size: cover;
   z-index: 24;
@@ -372,7 +372,7 @@ button {
   height: 19vw;
   top: 11.8vw;
   right: 32.3vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271990114226143273/toppng.com-ta5-map-mapa-de-los-santos-de-gta-5-976x1425.png?ex=66b9589b&is=66b8071b&hm=dcaeeff5dcb3c528afd1bc43af299593f4ba2de77ecda3ea10137a22ed0942b3&)
+  background: url(./assets/mapagta.png)
     no-repeat center;
   background-size: cover;
   z-index: 56;
@@ -461,7 +461,7 @@ button {
   width: 1.9vw;
   height: 2.1vw;
   margin: 0.2vw 0 0 0.3vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271989394651217982/User.png?ex=66b957f0&is=66b80670&hm=047c406cfb9d83dd09e87ecdc4a3ad1ac12fecbf989c7a0bf2c23102dda0c524&)
+  background: url(./assets/user.png)
     no-repeat center;
   background-size: 100% 100%;
   z-index: 26;
@@ -578,7 +578,7 @@ button {
   width: 2.3vw;
   height: 2.1vw;
   margin: 0.2vw 0 0 0.1vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271990916718268467/Briefcase.png?ex=66b9595a&is=66b807da&hm=f7f50ea9022879e0ca8e263c2501825fb251ef37187b3bd6412dc68f2e210ea6&)
+  background: url(./assets/maletin.png)
     no-repeat center;
   background-size: 100% 100%;
   z-index: 28;
@@ -656,7 +656,7 @@ button {
   width: 4.8vw;
   height: 4.8vw;
   margin: 0.001vw 0 0 0;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991174873350144/map.png?ex=66b95998&is=66b80818&hm=4164419815b9fb75a7a263649f5f0018aebbb6eeb304c26eb3de763c8691e8c5&)
+  background: url(./assets/map.png)
     no-repeat center;
   background-size: 100% 100%;
   z-index: 63;
@@ -711,7 +711,7 @@ button {
   height: 2.5vw;
   top: 24.1vw;
   left: 4.7vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991055474098217/cash-stack.png?ex=66b9597c&is=66b807fc&hm=9171761a149f34b13f28e272b151e7bfc521358b46a0333d862a7280592f8925&)
+  background: url(./assets/cash.png)
     no-repeat center;
   background-size: cover;
   z-index: 34;
@@ -799,7 +799,7 @@ button {
   height: 2.5vw;
   top: 30.1vw;
   left: 4.7vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991386417139773/credit-card.png?ex=66b959ca&is=66b8084a&hm=a1e8be554d12c834263ebeec6839d59bc223246d555da987af1d3f7749b5d2ba&)
+  background: url(./assets/card.png)
     no-repeat center;
   background-size: cover;
   z-index: 40;
@@ -894,7 +894,7 @@ button {
   height: 4.8vw;
   top: 34.2vw;
   left: 89.6vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991638473969777/gear-wide-connected.png?ex=66b95a07&is=66b80887&hm=f893dea17de6dbad6577b48f7a3c0f84186ed503413da5a057ddabf3defd6bd6&)
+  background: url(./assets/gear.png)
     no-repeat center;
   background-size: cover;
   z-index: 69;
@@ -963,7 +963,7 @@ button {
   height: 2.5vw;
   top: 37.2vw;
   left: 4.7vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991554449342484/info-circle.png?ex=66b959f3&is=66b80873&hm=aef8030152d47f20f259639cc355bf981ac8075da11100574fce52b3828dda2c&)
+  background: url(./assets/info.png)
     no-repeat center;
   background-size: cover;
   z-index: 45;
@@ -1153,7 +1153,7 @@ button {
   position: relative;
   width: 3.1vw;
   height: 3.1vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271991971241787435/cloud.png?ex=66b95a56&is=66b808d6&hm=5aadcaff3aa7604e3ee30f3f3bed308f636a4533d95546185bfadb2d85aab526&)
+  background: url(./assets/cloud.png)
     no-repeat center;
   background-size: 100% 100%;
   z-index: 55;
@@ -1197,7 +1197,7 @@ button {
   height: 3.1vw;
   top: 49.8vw;
   left: 10.3vw;
-  background: url(https://cdn.discordapp.com/attachments/1236286793406742599/1271992484255367188/door-open.png?ex=66b95ad0&is=66b80950&hm=ffee5e6e7605516e760414abe5e14dd0182c3e72eebce02749b8e5b3621d3476&)
+  background: url(./assets/exit.png)
     no-repeat center;
   background-size: cover;
   z-index: 51;

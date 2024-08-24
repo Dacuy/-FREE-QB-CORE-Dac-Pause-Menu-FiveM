@@ -1,8 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local joinTime = 0
 
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function()
+RegisterNetEvent('esx:playerLoaded', function()
     joinTime = os.time()
 end)
 
@@ -10,33 +9,32 @@ QBCore.Functions.CreateCallback('getPlayerData', function(source, cb)
     local xPlayer = QBCore.Functions.GetPlayer(source)
 
     if not xPlayer then
+        cb(nil)
         return
     end
 
-    
-    local jobGrade = xPlayer.PlayerData.job.grade.name
+    local playerData = xPlayer.PlayerData
+    local jobData = playerData.job
+    local charinfo = playerData.charinfo
+    local money = playerData.money
 
-    local money = {
-        cash = xPlayer.PlayerData.money["cash"],
-        bank = xPlayer.PlayerData.money["bank"],
-    }
     local Datas = {
-        name = xPlayer.PlayerData.charinfo.firstname .. " " .. xPlayer.PlayerData.charinfo.lastname,
-        job = xPlayer.PlayerData.job.name,
-        jobGrade = jobGrade,
+        name = charinfo.firstname .. " " .. charinfo.lastname,
+        job = jobData.name,
+        jobGrade = jobData.grade.name,
         cash = money.cash,
         money = money.bank,
-        from = xPlayer.PlayerData.charinfo.nationality,
+        from = charinfo.nationality,
         id = source
     }
     cb(Datas)
 end)
 
 QBCore.Functions.CreateCallback('jobCount', function(source, cb)
-    local policeCount = 0
-    local emsCount = 0
+    local policeCount, emsCount = 0, 0
+    local players = QBCore.Functions.GetPlayers()
 
-    for _, playerId in ipairs(GetPlayers()) do
+    for _, playerId in ipairs(players) do
         local player = QBCore.Functions.GetPlayer(tonumber(playerId))
         if player then
             local jobName = player.PlayerData.job.name
@@ -51,9 +49,7 @@ QBCore.Functions.CreateCallback('jobCount', function(source, cb)
     cb({policeCount = policeCount, emsCount = emsCount})
 end)
 
-
 -- Disconnect Callback
 RegisterNetEvent('disconnectPlayer', function()
-    local src = source
-    QBCore.Functions.Kick(src,'Te saliste pete')
+    QBCore.Functions.Kick(source, 'Te saliste pete')
 end)
