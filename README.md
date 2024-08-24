@@ -8,6 +8,14 @@ Here's an improved and translated version of your description in English:
 
 A script for FiveM that provides an interactive in-game menu with custom animations and configuration options. Ideal for servers looking to enhance user experience with a more fluid and enriched interface.
 
+## 🌐 Languages Avaiable:
+-**ENGLISH**
+-**SPANISH**
+-**PORTUGUESE**
+-**FRENCH**
+-**RUSSIAN**
+
+
 ## 🚀 Features
 
 - **Interactive Menu**: Open a custom menu with options for settings and maps.
