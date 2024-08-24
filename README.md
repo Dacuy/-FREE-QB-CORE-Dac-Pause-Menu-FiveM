@@ -21,7 +21,7 @@ A script for FiveM that provides an interactive in-game menu with custom animati
 
 ![Gif Low Quality](https://github.com/Dacuy/QB-Core-Dac-Pause-Menu/blob/main/nui/ui/assets/dacpausemenu2.0.gif)
 
-See the script in action with better quality in this [demonstration video](https://www.veed.io/view/41079bc4-52fd-4ee0-bb92-82bd2acd21bd?panel=share).
+See the script in action with better quality in this [demonstration video](https://youtu.be/9tHTOlEHReQ).
 
 ## 📸 Screenshots
 
